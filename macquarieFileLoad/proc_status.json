@@ -1,0 +1,12 @@
+{
+    "Maquerie Money Line": {
+        "status": false,
+        "dependencies": {
+            "margin_deficit_control": "email_margin"
+        }
+    },
+    "Margin Deficit Control": {
+        "status": false,
+        "dependencies": {}
+    }
+}

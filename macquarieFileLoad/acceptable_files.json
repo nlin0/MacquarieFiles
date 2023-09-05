@@ -1,0 +1,103 @@
+{
+    "process": {
+        "GPLAIN_FEE1": {
+            "name": "Fees",
+            "archive": true,
+            "last_up": "2023-07-26 04:00:00",
+            "files": []
+        },
+        "GPGINTRADAYFILE": {
+            "name": "GPG Intraday",
+            "archive": true,
+            "last_up": "2023-07-26 10:30:05",
+            "files": []
+        },
+        "GPLAIN_GPG": {
+            "name": "GPG",
+            "archive": true,
+            "last_up": "2023-07-26 04:00:00",
+            "files": []
+        },
+        "GPLAIN_OP1": {
+            "name": "Open Positions",
+            "archive": false,
+            "last_up": "2023-07-26 04:00:00",
+            "files": [],
+            "table": "dbo.broker_openPositionsMAQ",
+            "module": "maq_OP",
+            "flow": "op_proc",
+            "process_name": "Maquarie Open Positions",
+            "children": false
+        },
+        "GPLAIN_TD1": {
+            "name": "Daily Trades",
+            "archive": false,
+            "last_up": "2023-07-26 04:00:00",
+            "files": [],
+            "table": "dbo.broker_dailyTradesMAQ",
+            "module": "maq_TD",
+            "flow": "td_proc",
+            "process_name": "Maquarie Daily Trades",
+            "children": false
+        },
+        "GPLAIN_PS1": {
+            "name": "PS Trades",
+            "archive": false,
+            "last_up": "2023-07-26 04:00:00",
+            "files": [],
+            "table": "dbo.broker_PSMAQ",
+            "module": "maq_PS",
+            "flow": "ps_proc",
+            "process_name": "Maquarie PS Trades",
+            "children": false
+        },
+        "GPLAIN_LOAN1": {
+            "name": "Loans",
+            "archive": false,
+            "last_up": "2023-07-26 04:00:00",
+            "files": [],
+            "table": "dbo.broker_moneyLineMAQ",
+            "module": "maq_MONEYLINE",
+            "flow": "moneyline_proc",
+            "process_name": "Maquarie Loan Money Line",
+            "children": true
+        },
+        "GPLAIN_FIN1": {
+            "name": "Financials",
+            "archive": false,
+            "last_up": "2023-07-26 04:00:00",
+            "files": [],
+            "table": "dbo.broker_moneyLineMAQ",
+            "module": "maq_MONEYLINE",
+            "flow": "moneyline_proc",
+            "process_name": "Maquarie Money Line",
+            "children": true
+        },
+        "CONSENSYS_GP": {
+            "name": "CFTC Positions",
+            "archive": false,
+            "last_up": "2023-07-26 04:00:00",
+            "files": [],
+            "table": "dbo.broker_maq_CFTCPositions",
+            "module": "maq_CFTC",
+            "flow": "cftc_proc",
+            "process_name": "Maquarie CFTC Positions",
+            "children": false
+        },
+        "GREENPLAINSINTRA": {
+            "name": "Green Plains Intraday",
+            "archive": false,
+            "last_up": "2023-07-26 11:00:11",
+            "files": [
+                "GREENPLAINSINTRA_20230726_00002.csv"
+            ],
+            "table": "dbo.broker_intradayMaq",
+            "module": "maq_INTRA",
+            "flow": "intra_proc",
+            "process_name": "MAQ Intraday File Load",
+            "children": false
+        }
+    },
+    "last_update": "2023-07-26 11:00:11",
+    "process_name": "Macquarie FTP Synch"
+}
